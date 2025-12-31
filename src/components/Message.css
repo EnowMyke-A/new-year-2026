@@ -1,0 +1,461 @@
+/* Base Styles */
+.message-container {
+  min-height: 100vh;
+  background-color: #F7EEEF;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+ /* position: relative;*/
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Floating Hearts */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(234, 42, 51, 0.15);
+  font-size: 1.5rem;
+  z-index: 0;
+}
+
+.heart-1 { top: 15%; left: 10%; transform: rotate(-12deg); }
+.heart-2 { top: 45%; right: 15%; font-size: 2.5rem; transform: rotate(6deg); }
+.heart-3 { bottom: 20%; left: 20%; font-size: 2rem; transform: rotate(-6deg); }
+.heart-4 { top: 60%; left: 5%; font-size: 1.25rem; }
+.heart-5 { top: 10%; right: 30%; font-size: 1rem; }
+.heart-6 { bottom: 10%; right: 10%; font-size: 1.75rem; transform: rotate(12deg); }
+
+/* App Bar */
+.app-bar {
+  position: relative;
+  z-index: 10;
+  max-width: 28rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0.5rem;
+  width: 100%;
+}
+
+.app-bar h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  color: inherit;
+}
+
+.music-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.music-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* Main Content */
+.main-content {
+  position: relative;
+  z-index: 10;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(234, 42, 51, 0.1);
+  color: #ea2a33;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: inherit;
+}
+
+.hero .divider {
+  width: 4rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, transparent, #ea2a33, transparent);
+  margin: 1.5rem auto 0;
+  border-radius: 0.125rem;
+}
+
+/* Message Body */
+.message-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.message-body article {
+  text-align: center;
+}
+
+.message-body p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.message-body p span{
+    font-weight: normal !important;
+}
+
+.highlight {
+  color: #ea2a33;
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+  color: #ea2a33;
+  opacity: 0.8;
+}
+
+.bold {
+  font-weight: 700;
+  color: #ea2a33;
+}
+
+/* Sign Off 
+.sign-off {
+  padding-top: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+  */
+
+.signature-text {
+  font-family: 'Playfair Display', serif;
+  color: #ea2a33 !important;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.signature{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   font-family: 'Playfair Display', serif;
+   font-style: italic;
+   color: #ea2a33 !important;
+}
+
+.signature .material-symbols-outlined {
+  font-size: 2rem;
+  color: #ea2a33;
+  opacity: 0.8;
+}
+
+.music-button .material-symbols-outlined{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: inherit;
+}
+
+.icon-wrapper .material-symbols-outlined{
+    font-size: 24px;
+    color: #ea2a33;
+}
+
+/* Footer */
+.message-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: linear-gradient(to top, #f8f6f6, rgba(248, 246, 246, 0.9), transparent);
+  padding: 3rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.action-button {
+  width: 100%;
+  max-width: 28rem;
+  background-color: #ea2a33;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(234, 42, 51, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
+  pointer-events: auto;
+}
+
+.action-button:hover {
+  background-color: #d41f28;
+  transform: translateY(-1px);
+}
+
+.action-button:active {
+  transform: scale(0.98);
+}
+
+.save-text {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-family: 'Manrope', sans-serif;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 640px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .message-body p {
+    font-size: 1.25rem;
+  }
+  
+  .action-button {
+    font-size: 1.25rem;
+  }
+}
+
+/* Animation for floating hearts */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-18px) rotate(var(--rotate, 0deg));
+  }
+}
+
+.heart {
+  animation: float 6s ease-in-out infinite;
+}
+
+.heart-1 { --rotate: -12deg; animation-delay: 0s; }
+.heart-2 { --rotate: 6deg; animation-delay: 1s; }
+.heart-3 { --rotate: -6deg; animation-delay: 2s; }
+.heart-4 { --rotate: 0deg; animation-delay: 3s; }
+.heart-5 { --rotate: 0deg; animation-delay: 4s; }
+.heart-6 { --rotate: 12deg; animation-delay: 5s; }
+
+
+/* 1. Make the container exactly the height of the screen */
+.message-container {
+  height: 100vh; 
+  height: 100dvh; /* Better for mobile browsers */
+  display: flex;
+  flex-direction: column;
+  background-color: #F7EEEF;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  overflow: hidden; /* Prevents the whole page from scrolling */
+}
+
+/* 2. Make the middle content scrollable */
+.main-content {
+  flex: 1; 
+  overflow-y: auto; /* Only the letter text scrolls */
+  position: relative;
+  z-index: 10;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Smooth scrolling for a better feel */
+  -webkit-overflow-scrolling: touch; 
+}
+
+/* 3. Anchoring the Footer */
+.message-footer {
+  /* We remove position: fixed and let flexbox anchor it */
+  position: relative; 
+  width: 100%;
+  z-index: 20;
+  background: linear-gradient(to top, #F7EEEF 80%, rgba(247, 238, 239, 0));
+  padding: 1.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Keep your existing button logic */
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Flirt section should feel slower */
+.reveal.flirt {
+  transition-duration: 2s;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Individual Message Reveal Animation --- */
+.individual-reveal {
+  animation: revealUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+@keyframes revealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Layout Anchor Fix --- */
+.message-container {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent body scroll, only main content scrolls */
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto; /* Scrollable area */
+  padding: 2rem 1.5rem 6rem; /* Extra padding at bottom so text clears the button */
+  scroll-behavior: smooth;
+}
+
+.message-footer {
+  position: relative; /* Stays at the bottom of the flex column */
+  padding: 1rem 1.5rem 2rem;
+  background: linear-gradient(to top, #F7EEEF 80%, rgba(247, 238, 239, 0));
+  z-index: 30;
+}
+
+/* Style for the colored spans used in JSX */
+.highlight-text {
+  color: #ea2a33;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.sign-off-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Loading Section Styles */
+.loading-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;margin-top: -3rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(234, 42, 51, 0.1);
+  border-radius: 50%;
+  border-top-color: #ea2a33; /* Matches your red theme */
+  animation: spin 1s ease-in-out infinite;
+}
+
+.loading-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Ensure the flirt message stands out when it finally loads */
+.group.flirt p {
+  color: #111827;
+  font-weight: 500;
+}
+

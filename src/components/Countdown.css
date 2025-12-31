@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+.countdown-container {
+  font-family: 'Manrope', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f6f6;
+  color: #181111;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Decor */
+.background-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+}
+
+.decor-circle.top-right {
+  top: -5rem;
+  right: -5rem;
+  width: 24rem;
+  height: 24rem;
+ 
+}
+
+.decor-circle.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: rgba(234, 42, 51, 0.05);
+  filter: blur(100px);
+}
+
+.decor-circle.bottom-left {
+  bottom: -5rem;
+  left: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(234, 42, 51, 0.1);
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAvNOowOCvyPHhz2UYFHcuNYWzzzoLZlAIczEoOu89_TkDPb4vffw4Rw1If0mFij-gMO4YaDNrODkfqvBEUd8C9n77VIJOCRCKb3Pu_TqUuvnOFjsoclmCbJyCUTSFAvN0sCObMspa113B7CJt41KYnUe3X3CxOV6zL2ZSypMvJ5iy3VOSrxCoEZNMx-LZfbpH2YjXOzcLbtK3A5sRseZIdufgzoSjmFSoo3ynAheRRYy2gTRAtGwNKIJ5NfQe_IhRitUwZ2qTq9tX');
+  opacity: 0;
+  mix-blend-mode: overlay;
+}
+
+/* Header */
+.countdown-header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-content h2 {
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.material-symbols-outlined {
+  color: rgba(234, 42, 51, 0.6);
+  font-size: 0.875rem;
+}
+
+/* Main Content */
+.countdown-main {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  max-width: 28rem;
+  padding: 0 1.5rem;
+}
+
+/* Status Text */
+.status-text {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.status-text h2 {
+  color: #ea2a33;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.025em;
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+  user-select: none;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.time-value {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(243, 244, 246, 1);
+  border-radius: 0.75rem;
+  width: 100%;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  transition: transform 0.5s;
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #6b7280;
+}
+
+.time-block:hover .time-value {
+  transform: scale(1.1);
+}
+
+.time-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+
+.time-separator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: rgba(234, 42, 51, 0.3);
+  font-weight: 300;
+}
+
+/* Decorative line */
+.decorative-line {
+  width: 4rem;
+  height: 0.25rem;
+  background-color: rgba(234, 42, 51, 0.1);
+  border-radius: 9999px;
+  margin-top: 3rem;
+}
+
+/* Footer */
+.countdown-footer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 1rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.countdown-footer p {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.enter-button {
+  width: 100%;
+  max-width: 28rem;
+  background-color: #ea2a33;
+  color: white;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(234, 42, 51, 0.1), 0 4px 6px -4px rgba(234, 42, 51, 0.1);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.enter-button:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.enter-button:active {
+  background-color: #b91c1c;
+  transform: translateY(0);
+}
+
+.enter-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.enter-button .material-symbols-outlined {
+  color: white;
+  font-size: 1.125rem;
+  transition: transform 0.3s;
+}
+
+.enter-button:hover .material-symbols-outlined {
+  transform: translateX(4px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .time-value span {
+    font-size: 3rem;
+  }
+  
+  .time-label {
+    font-size: 0.75rem;
+  }
+  
+  .countdown-timer {
+    gap: 0.5rem;
+  }
+  
+  .status-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Add this to your Countdown.css */
+.arrow-icon {
+  display: inline-block;
+  animation: arrowBounce 3s infinite ease-in;
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  12% {
+    transform: translateX(4px);
+  }
+  24% {
+    transform: translateX(0);
+  }
+  36% {
+    transform: translateX(4px);
+  }
+  48%{
+    transform: translateX(0);
+  }
+}
