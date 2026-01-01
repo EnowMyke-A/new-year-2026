@@ -20,7 +20,7 @@ export default function Countdown() {
     setIsClient(true);
 
     // Set the target date to January 1, 2026
-    const targetDate = new Date("2026-01-01T00:30:00").getTime();
+    const targetDate = new Date("2026-01-01T02:15:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -106,7 +106,7 @@ export default function Countdown() {
       <main className="countdown-main">
         {/* Status Text */}
         <div className="status-text">
-          <h2>Some moments shouldn’t be rushed. Midnight.</h2>
+          <h2>Some moments shouldn’t be rushed. Few minutes left.</h2>
         </div>
 
         {/* Countdown Timer */}
